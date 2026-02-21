@@ -1,0 +1,92 @@
+:root {
+            --mu-red: rgba(218, 41, 28, 0.65);
+        }
+ body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #da291c;
+            font-family: sans-serif;
+        }
+.image-container {
+            position: relative;
+            width: 100%;
+            max-width: 100vw; 
+            height: auto;
+            overflow: hidden;
+            line-height: 0;
+        }
+.base-image {
+            width: 100%;
+            height: auto;
+            filter: contrast(1.1) brightness(0.9);
+            display: block;
+        }
+.overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--mu-red);
+            mix-blend-mode: multiply;
+            pointer-events: none;
+        }
+.vignette {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 30%, rgba(0,0,0,0.4) 100%);
+            pointer-events: none;
+        }
+.collage-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            pointer-events: none; /* Agar tidak menghalangi klik pada tombol nantinya */
+        }
+
+        .collage-item {
+            position: absolute;
+            pointer-events: auto;
+            box-shadow: none;
+            border: none;
+            object-fit: cover;
+        }
+
+        /* Penempatan foto sesuai referensi gambar */
+        .img-1 { top: 5%; left: 20%; width: 15%; } /* Foto kiri atas */
+        .img-2 { top: 5%; left: 40%; width: 20%; } /* Tweet Fabrizio */
+        .img-3 { top: 4%; right: 10%; width: 20%; } /* Foto kanan atas */
+        .img-4 { top: 38%; left: 18%; width: 15%; } /* Amrabat (?) kiri */
+        .img-5 { top: 20%; left: 38%; width: 25%; z-index: 15; border: 3px solid white; } /* Foto utama tengah (Inka 22) */
+        .img-6 { top: 40%; right: 18%; width: 15%; } /* Bruno kanan */
+        .img-7 { bottom: 5%; left: 22%; width: 13%; } /* Cunha (Kiri Bawah) */
+        .img-8 { bottom: 2%; left: 63%; width: 12%; }
+    #youtube-player-container {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+            visibility: hidden;
+        }
+.description {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            line-height: normal;
+        }

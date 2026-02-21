@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inka's Sweet 17th</title>
+    <style>
+        body {
+            background-color: bisque;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 2.5rem;
+            color: #5d4037;
+            text-align: center;
+            margin: 0 0 40px 0;
+            line-height: 1.2;
+        }
+
+        /* Container utama untuk menyejajarkan ketiga vinyl secara horizontal */
+        .music-display {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+            flex-wrap: wrap;
+        }
+
+        .vinyl-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            width: 250px; /* Ukuran sedikit lebih kecil agar muat bertiga */
+        }
+
+        .vinyl-wrapper:hover {
+            transform: scale(1.05);
+        }
+
+        .vinyl-container {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .record {
+            width: 100%;
+            height: 100%;
+            background-color: #181818;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            background-image: repeating-radial-gradient(
+                circle,
+                transparent,
+                transparent 5px,
+                rgba(255,255,255,0.03) 6px,
+                transparent 7px
+            );
+            animation: spin 4s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .record::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            border-radius: 50%;
+            background: linear-gradient(
+                135deg,
+                transparent 45%,
+                rgba(255,255,255,0.1) 50%,
+                transparent 55%
+            );
+            pointer-events: none;
+        }
+
+        .label {
+            width: 85px;
+            height: 85px;
+            background-color: #8d6e63;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid #5d4037;
+            z-index: 2;
+            position: relative;
+        }
+
+        .label img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hole {
+            width: 10px;
+            height: 10px;
+            background-color: bisque;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 3;
+            border: 2px solid #5d4037;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .album-info {
+            margin-top: 15px;
+            color: #5d4037;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+            min-height: 40px;
+        }
+
+        /* Container Tombol */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 50px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            background-color: #5d4037;
+            color: bisque;
+            padding: 12px 35px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(93, 64, 55, 0.3);
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .nav-button:hover {
+            background-color: #8d6e63;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(93, 64, 55, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Songs for Incow 🌀</h1>
+
+    <div class="music-display">
+        
+        <!-- Vinyl Kiri: ABBA -->
+    <a href="https://open.spotify.com/track/08GOw3NsrJ0LsCCeyqzt3b?si=6ca9994886a24ef7" target="_blank" class="vinyl-wrapper">
+        <div class="vinyl-wrapper">
+            <div class="vinyl-container">
+                <div class="record">
+                    <div class="label">
+                        <img src="https://i.scdn.co/image/ab67616d0000b2735f96e866b646da41248009d0" alt="ABBA">
+                    </div>
+                    <div class="hole"></div>
+                </div>
+            </div>
+            <div class="album-info">
+                🎵 Playing: Thank You For The Music - ABBA
+            </div>
+    </a>
+        </div>
+
+        <!-- Vinyl Tengah: NewJeans -->
+        <a href="https://open.spotify.com/track/5sdQOyqq2IDhvmx2lHOpwd?si=d861272f7e4d44c9" target="_blank" class="vinyl-wrapper">
+            <div class="vinyl-container">
+                <div class="record">
+                    <div class="label">
+                        <img src="https://i.scdn.co/image/ab67616d0000b2733d98a0ae7c78a3a9babaf8af" alt="NewJeans">
+                    </div>
+                    <div class="hole"></div>
+                </div>
+            </div>
+            <div class="album-info">
+                🎵 Playing: SuperShy - Newjeans
+            </div>
+        </a>
+
+        <!-- Vinyl Kanan: Daniel Caesar -->
+         <a href="https://open.spotify.com/track/79ld9rq0iOwvgnaDkN0iGP?si=5c257392e6f04b43" target="_blank" class="vinyl-wrapper">
+        <div class="vinyl-wrapper">
+            <div class="vinyl-container">
+                <div class="record">
+                    <div class="label">
+                        <img src="https://media.pitchfork.com/photos/5d15374982ada80008ddf2ca/master/pass/CaseStudy_DanielCaesar.jpg" alt="Daniel Caesar">
+                    </div>
+                    <div class="hole"></div>
+                </div>
+            </div>
+            <div class="album-info">
+                🎵 Playing: Restore The Feeling - Daniel Caesar
+            </div>
+        </div>
+        </a>
+    </div>
+
+    <!-- Container Tombol -->
+    <div class="button-container">
+        <a href="page3.html" class="nav-button"> Mw balik </a>
+        <a href="page5.html" class="nav-button">PENCET INI PLEASE!</a>
+    </div>
+
+</body>
+</html>
