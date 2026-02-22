@@ -20,18 +20,49 @@
             <img src="image (4).png" class="collage-item img-4" alt="Player 2">
             
         
-            <img src="https://static.wikitide.net/sexypediawiki/5/5f/GiHun.webp" class="collage-item img-5" alt="Inka 22">
+            <img src="HERE WE GO! INKA JADI FANS KING EMYU (1).png" class="collage-item img-5" alt="Inka 22">
             
             <img src="image (5).png" class="collage-item img-6" alt="Bruno">
             <img src="image (2).png" class="collage-item img-7" alt="Player 3">
             <img src="https://assets.manutd.com/AssetPicker/images/0/0/22/207/1494871/SL-PlayerProfle-Cutout1756802312073.png" class="collage-item img-8" alt="Lammens">
         </div>
-<div id="youtube-player-container">
+    <div id="youtube-player-container">
         <iframe
             id="yt-player"
-            src="https://www.youtuberepeater.com/watch?v=FX1GVbFbeFU#gsc.tab=0" 
+            src="#" 
             allow="autoplay">
         </iframe>
     </div>
+    <div class="question-box" id="questionBox">
+            <div class="btn-group">
+                <button class="btn btn-yes" onclick="sayYes()">MAU!</button>
+                <button class="btn btn-no" onclick="sayNo()">NGGAK</button>
+            </div>
+        </div>
+    </div>
+    <div id="responseModal" class="modal">
+        <div class="modal-content">
+            <h1 id="modalTitle" style="color: #da291c;"></h1>
+            <p id="modalText"></p>
+            <button class="btn btn-yes" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    <script>
+        function sayYes() {
+            const modal = document.getElementById('responseModal');
+            document.getElementById('modalTitle').innerText = "GGMU!! 👹";
+            document.getElementById('modalText').innerText = "Have a beautiful birthday, Inka! I hope you always remember things that I do.";
+            modal.style.display = 'flex';
+        }
+
+        function sayNo() {
+            modal.style.display = 'flex';
+            "#"
+        }
+
+        function closeModal() {
+            document.getElementById('responseModal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

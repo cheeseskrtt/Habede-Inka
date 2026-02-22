@@ -68,9 +68,60 @@
         .img-3 { top: 4%; right: 10%; width: 20%; } /* Foto kanan atas */
         .img-4 { top: 38%; left: 18%; width: 15%; } /* Amrabat (?) kiri */
         .img-5 { top: 20%; left: 38%; width: 25%; z-index: 15; border: 3px solid white; } /* Foto utama tengah (Inka 22) */
-        .img-6 { top: 40%; right: 18%; width: 15%; } /* Bruno kanan */
+        .img-6 { top: 40%; right: 14%; width: 15%; } /* Bruno kanan */
         .img-7 { bottom: 5%; left: 22%; width: 13%; } /* Cunha (Kiri Bawah) */
-        .img-8 { bottom: 2%; left: 63%; width: 12%; }
+        .img-8 { bottom: 2%; left: 73%; width: 12%; } /* Bayindir (Kanan Bawah) */
+        .question-box {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+            z-index: 100;
+            pointer-events: auto;
+        }
+
+        .question-box h2 {
+            margin: 0 0 15px 0;
+            color: #da291c;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 1rem;
+        }
+
+        .btn-yes {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-yes:hover {
+            background-color: #218838;
+            transform: scale(1.1);
+        }
+
+        .btn-no {
+            background-color: #dc3545;
+            color: white;
+        }
     #youtube-player-container {
             position: absolute;
             width: 1px;
@@ -82,11 +133,34 @@
             border: 0;
             visibility: hidden;
         }
-.description {
+        .description {
             position: absolute;
             bottom: 20px;
             width: 100%;
             text-align: center;
             color: white;
             line-height: normal;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+        }
+
+        .modal-content {
+            background: white;
+            color: #333;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 400px;
         }
